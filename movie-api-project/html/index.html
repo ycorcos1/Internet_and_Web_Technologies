@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Helper!</title>
+    <link rel="icon" type="images/x-icon" href="../images/favicon.ico">
+    <style>
+        body, form{
+            margin:0 auto;
+            max-width:1000px;
+            overflow-x:hidden;
+        }
+        fieldset{
+            display:flex;
+        }
+        input#genre{
+            flex-grow: 50;
+            margin: 0 20px;
+        }
+        input#year{
+            flex-grow: 50;
+            margin: 0 20px;
+        }
+        input#actor{
+            flex-grow: 50;
+            margin: 0 20px;
+        }
+        input#keyword{
+            flex-grow: 50;
+            margin: 0 20px;
+        }
+    </style>
+</head>
+<body>
+    <img src="../images/banner.jpg" alt="Movie Helper!" class="center" width="1000" height="400">
+    <h3 title="title">Trying to find a movie to watch?</h3>
+    <h4 title="subtitle">Generate some movie ideas. You can enter some filters if you are looking for something specific</h4>
+    <form action="search" method="get">
+        <fieldset>
+            <label for="genre">Genre:</label>
+            <input id="genre" name="genre" type="text"/>
+            <label for="year">Year:</label>
+            <input id="year" name="year" type="text"/>
+            <label for="actor">Actor:</label>
+            <input id="actor" name="actor" type="text"/>
+            <input type="submit" value="Search" />
+            <!-- <input type="submit" name = "trending" value="Get Trending!" /> -->
+        </fieldset>
+    </form>
+    <form action="keyword" method="get">
+        <fieldset>
+            <label for="keyword">Search for movies with keyword(s)</label>
+            <input id="keyword" name="keyword" type="text"/>
+            <input type="submit" value="Search" />
+        </fieldset>
+    </form>
+    <form action="trending" method="get">
+        <fieldset>
+            <label for="trending">Get trending movies</label>
+            <input type="submit" name="day" value="Day"/>
+            <input type="submit" name="week" value="Week"/>
+            <label for="toprated">Get Top Rated Movies</label>
+            <input type="submit" name="toprated" value="Top Rated"/>
+        </fieldset>
+    </form>
+</body>
+</html>
