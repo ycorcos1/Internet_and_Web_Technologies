@@ -12,7 +12,7 @@ server.on('listening', listening_handler);
 function listening_handler(){
     console.log(`Listening on port ${port}`);
 }
-server.listen(3000);
+server.listen(port);
 
 server.on('request', request_handler);
 function request_handler(req, res){
